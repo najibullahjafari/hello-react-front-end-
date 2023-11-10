@@ -122,7 +122,7 @@ To run the project, execute the following command:
 2. Copy [.stylelintrc.json](./.stylelintrc.json) to the root directory of your project.
 3. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-4. Run `npx stylelint "**/*.{css,scss}"` on the root of your directory of your project.
+4. Run `npx stylelint --fix "**/*.{css,scss}"` on the root of your directory of your project.
 5. Fix linter errors.
 6. **IMPORTANT NOTE**: feel free to research [auto-correct options for Stylelint](https://stylelint.io/user-guide/usage/options) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
 
@@ -193,19 +193,8 @@ I would like to thank Microverse.
 
 > Learn more about FAQ below:
 
-- **How do I fix Linters errors if I modify the project?**
+- **feel free to ask question in issue part**
 
-  - for rubocop run
-
-  ```sh
-  rubocop -A
-  ```
-
-  - for Stylint run:
-
-  ```sh
-  npx stylelint "**/*.{css,scss}" --fix
-  ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

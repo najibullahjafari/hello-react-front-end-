@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h3><b>Hello Rails Front-end</b></h3>
+  <h3><b>Hello Rails Back-end</b></h3>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -9,7 +9,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Hello Rails front-end ](#ruby-on-rails-group-project)
+- [📖 Hello Rails Back-end ](#ruby-on-rails-group-project)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -29,10 +29,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Hello rails front-end<a name="ruby-on-rails-group-project"></a>
+# 📖 Hello rails back-end<a name="ruby-on-rails-group-project"></a>
 
-**Hello rials front-end** 
-Hello rails front-end of an application that created with rails as an API you can see the api repo (here)[https://github.com/najibullahjafari/hello-rails-back-end].
+**Hello rials Back-end** 
+Hello rails Back-end is an application that rails as an API.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -40,6 +40,19 @@ Hello rails front-end of an application that created with rails as an API you ca
 
 > So you want to lear more about the tech we have used for this project?
 
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 <summary>Front-end</summary>
   <ul>
     <li><a href="#">React</a></li>
@@ -50,9 +63,9 @@ Hello rails front-end of an application that created with rails as an API you ca
 
 ### Key Features <a name="key-features"></a>
 
+- **Make use for migrations features from Active Record**
+- **Include Tables for User, Categories and Transactions**
 - **Include React**
-- **Include React dom**
-- **Include Redux**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -61,15 +74,16 @@ Hello rails front-end of an application that created with rails as an API you ca
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
+Note: We are assuming you have pre-installed ruby, WSL, ubuntu and rails!
 
 ### Prerequisites
 
 In order to run this project you need:
 
-first at all, install react:
+first at all, install rails:
 
 ```sh
-npm install 
+ gem install rails
 ```
 
 ### Setup
@@ -77,7 +91,7 @@ npm install
 Clone this repository to your desired folder:
 
 ```sh
-git clone https://github.com/najibullahjafari/hello-react-front-end
+git clone https://github.com/najibullahjafari/hello-rails-back-end
 ```
 
 ### Install
@@ -85,58 +99,60 @@ git clone https://github.com/najibullahjafari/hello-react-front-end
 Install this project with:
 
 ```sh
-  npm install
+  bundle install
+```
+
+Setting up the Data Base:
+
+```sh
+  rails db:create
+  rails db:migrate
+  rails db:seed
 ```
 
 ### Usage
 
 To run the project, execute the following command:
-**to setup linter**
-
-## Set-up linters in your local env
-
-### ESLint
-
-1. Run 
-    ```
-    npm install --save-dev eslint@7.x eslint-config-airbnb@18.x eslint-plugin-import@2.x eslint-plugin-jsx-a11y@6.x eslint-plugin-react@7.x eslint-plugin-react-hooks@4.x @babel/eslint-parser@7.x @babel/core@7.x  @babel/plugin-syntax-jsx@7.x  @babel/preset-react@7.x @babel/preset-react@7.x
-    ```
-    *not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
-2. Copy [.eslintrc.json](./.eslintrc.json) and [.babelrc](./.babelrc) to the root directory of your project.
-3. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-4. Run `npx eslint "**/*.{js,jsx}"` on the root of your directory of your project.
-5. Fix linter errors.
-6. **IMPORTANT NOTE**: feel free to research [auto-correct options for Eslint](https://eslint.org/docs/latest/user-guide/command-line-interface#fixing-problems) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
-
-### Stylelint
-
-1. Run
-
-   ```
-   npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
-   ```
-
-   *not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
-
-2. Copy [.stylelintrc.json](./.stylelintrc.json) to the root directory of your project.
-3. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-   - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-4. Run `npx stylelint --fix "**/*.{css,scss}"` on the root of your directory of your project.
-5. Fix linter errors.
-6. **IMPORTANT NOTE**: feel free to research [auto-correct options for Stylelint](https://stylelint.io/user-guide/usage/options) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
 
 ```sh
-  npm start
+  rails server
 ```
+
+### Run tests
+
+<!-- Test are under construction, but we expect to have them completed soon! -->
+
+Before running tests, ensure you've set up the test database:
+
+```sh
+bin/rails db:migrate RAILS_ENV=test
+```
+
+**Note:** Given that the aim of this project is to test the application's UI, to see if it works without side effects. We have therefore had to modify the contents of certain files, which could have the effect of falsifying certain `Unit` tests.
+We therefore recommend that, rather than running all the tests, you only test the `features` folder.
+
+```sh
+bundle exec rspec ./spec/features
+
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Install
 
 Install this project with:
 
 ```sh
-  cd hello-react-front-end 
-  npm install 
+  cd hello-rails-back-end
+  bundle install
+```
+
+Setting up the Data Base:
+
+```sh
+  rails db:create
+  rails db:migrate
+  rails db:seed
 ```
 
 ## 👥 Authors <a name="authors"></a>
@@ -152,11 +168,25 @@ Install this project with:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
+
 > We this project can improve, we are planning to include the next features soon:
 
 - [x] **User Interface**
-
-
+- [x] **Validations**
+- [x] **API documentation**
+- [x] **Model Data**
+- [x] **Controllers Testing**
+- [x] **Models Testing**
+- [x] **View Implementation**
+- [x] **User Interface**
+- [x] **Validations**
+- [x] **API documentation**
+- [x] **Model Data**
+- [x] **Controllers Testing**
+- [x] **Models Testing**
+- [x] **View Implementation**
+- [x] **Integration Testing**
+- [x] **Unit Testing**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -167,7 +197,7 @@ Install this project with:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/najibullahjafari/hello-react-front-end/issues).
+Feel free to check the [issues page](https://github.com/najibullahjafari/hello-react-front-end-/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -193,8 +223,19 @@ I would like to thank Microverse.
 
 > Learn more about FAQ below:
 
-- **feel free to ask question in issue part**
+- **How do I fix Linters errors if I modify the project?**
 
+  - for rubocop run
+
+  ```sh
+  rubocop -A
+  ```
+
+  - for Stylint run:
+
+  ```sh
+  npx stylelint "**/*.{css,scss}" --fix
+  ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
